@@ -12,7 +12,7 @@ services:
             - glpi_grafmarques
         restart: on-failure:2
     back:
-        build: ./back
+        build: ./back/.env
         container_name: back_container
         depends_on:
             - db
@@ -25,7 +25,7 @@ services:
             - glpi_grafmarques
         restart: on-failure:2
     front:
-        build: ./front
+        build: ./front/.env
         container_name: front_container
         depends_on:
             - back
